@@ -92,6 +92,9 @@
     });
 
     describe('flatten', function() {
+      checkForNativeMethods(function() {
+        _.flatten([1, [2], [[3]]]);
+      });
 
       it('can flatten nested arrays', function() {
         var nestedArray = [1, [2], [3, [[[4]]]]];
@@ -101,6 +104,9 @@
     });
 
     describe('zip', function() {
+      checkForNativeMethods(function() {
+        _.zip([1, 2, 3], ['name', 'age', 'location'], [true, false]);
+      });
 
       it('should zip together arrays of different lengths', function() {
         var names = ['moe', 'larry', 'curly'];
