@@ -20,6 +20,9 @@
   describe('Part I', function() {
 
     describe('identity', function() {
+      checkForNativeMethods(function() {
+        _.identity('str');
+      });
 
       it('should return whatever value is passed into it', function() {
         var uniqueObject = {};
@@ -31,6 +34,9 @@
     });
 
     describe('first', function() {
+      checkForNativeMethods(function() {
+        _.first([1, 2, 3]);
+      });
 
       it('should be able to pull out the first element of an array', function() {
         expect(_.first([1, 2, 3])).to.equal(1);
@@ -52,6 +58,9 @@
     });
 
     describe('last', function() {
+      checkForNativeMethods(function() {
+        _.last([1, 2, 3]);
+      });
 
       it('should pull the last element from an array', function() {
         expect(_.last([1, 2, 3])).to.equal(3);
@@ -71,7 +80,9 @@
     });
 
     describe('each', function() {
-
+      checkForNativeMethods(function() {
+        _.each([1, 2, 3], function(arr) {});
+      });
       it('should not return anything', function() {
         var returnValue = _.each([], function() {});
         expect(returnValue).to.not.exist;
@@ -215,6 +226,9 @@
     });
 
     describe('indexOf', function() {
+      checkForNativeMethods(function() {
+        _.indexOf([1, 2, 3], 2);
+      });
 
       it('should find 40 in the list', function() {
         var numbers = [10, 20, 30, 40, 50];
@@ -241,6 +255,9 @@
     });
 
     describe('filter', function() {
+      checkForNativeMethods(function() {
+        _.filter([1, 2, 3], function(arr) {});
+      });
 
       it('should return all even numbers in an array', function() {
         var isEven = function(num) { return num % 2 === 0; };
@@ -266,6 +283,9 @@
     });
 
     describe('reject', function() {
+      checkForNativeMethods(function() {
+        _.reject([1, 2, 3], function(arr) {});
+      });
 
       it('should reject all even numbers', function() {
         var isEven = function(num) { return num % 2 === 0; };
@@ -291,6 +311,9 @@
     });
 
     describe('uniq', function() {
+      checkForNativeMethods(function() {
+        _.uniq([1, 2, 2, 3], function(arr) {});
+      });
 
       it('should not mutate the input array', function() {
         var input = [1, 2, 3, 4, 5];
@@ -344,6 +367,9 @@
     });
 
     describe('map', function() {
+      checkForNativeMethods(function() {
+        _.map([1, 2, 3], function(arr) {});
+      });
 
       it('should not mutate the input array', function() {
         var input = [1, 2, 3, 4, 5];
@@ -394,6 +420,9 @@
     });
 
     describe('pluck', function() {
+      checkForNativeMethods(function() {
+        _.pluck([{name: 'moe', age: 2}, {name: 'hieu', age: 'old'}], 'name');
+      });
 
       it('should return values contained at a user-defined property', function() {
         var people = [
@@ -417,6 +446,9 @@
     });
 
     describe('reduce', function() {
+      checkForNativeMethods(function() {
+        _.reduce([1, 2, 3], function(memo, num) {});
+      });
 
       it('should return a value', function() {
         var result = _.reduce([3, 2, 1], function(memo, item) { return item; });
