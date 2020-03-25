@@ -18,6 +18,9 @@
   describe('Part II', function() {
 
     describe('contains', function() {
+      checkForNativeMethods(function() {
+        _.contains([1, 2, 3], 2);
+      });
 
       it('should not mutate the input array', function() {
         var input = [1, 2, 3, 4, 5];
@@ -80,6 +83,9 @@
       var isEven = function(num) {
         return num % 2 === 0;
       };
+      checkForNativeMethods(function() {
+        _.every([1, 2, 3], function(arr) {});
+      });
 
 
       it('passes by default for an empty collection', function() {
@@ -126,6 +132,9 @@
       var isEven = function(number) {
         return number % 2 === 0;
       };
+      checkForNativeMethods(function() {
+        _.some([0, null, 1]);
+      });
 
 
       it('should fail by default for an empty collection', function() {
@@ -171,6 +180,9 @@
     });
 
     describe('extend', function() {
+      checkForNativeMethods(function() {
+        _.extend({name: 'hieu'}, {age: 'old'});
+      });
 
       it('returns the first argument', function() {
         var destination = {};
@@ -220,6 +232,9 @@
     });
 
     describe('defaults', function() {
+      checkForNativeMethods(function() {
+        _.defaults({name: 'hieu'}, {age: 'old'});
+      });
 
       it('should return the original target object', function() {
         /*
@@ -349,6 +364,9 @@
     });
 
     describe('once', function() {
+      checkForNativeMethods(function() {
+        _.once(function(fnc) {});
+      });
 
       it('should return a function', function() {
         // noop is short for `no-operation` and is pronounced `no-op`
@@ -398,6 +416,9 @@
         };
 
         memoAdd = _.memoize(add);
+      });
+      checkForNativeMethods(function() {
+        _.memoize(function(cache) {});
       });
 
 
@@ -454,6 +475,9 @@
       beforeEach(function() {
         callback = sinon.spy();
       });
+      checkForNativeMethods(function() {
+        _.delay(function(arr) {}, 666);
+      });
 
 
       it('should only execute the function after the specified wait time', function() {
@@ -476,6 +500,9 @@
     });
 
     describe('shuffle', function() {
+      checkForNativeMethods(function() {
+        _.shuffle([1, 2, 3, 4, 5, 6, 7, 8]);
+      });
 
       it('should not modify the original object', function() {
         var numbers = [4, 5, 6];
