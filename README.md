@@ -41,6 +41,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Family and friends
+This project would not have been possible without all the support and encouragement from:
+
+* My family and friends
 * HackReactor
-* 
